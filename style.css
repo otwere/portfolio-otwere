@@ -392,8 +392,8 @@ input,textarea,select{
   -webkit-transition: all 0.3s ease;
 }
 .home .intro .social-link a:hover{
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 
