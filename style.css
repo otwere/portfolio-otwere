@@ -2,15 +2,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
 
 /* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
 
 /* General Style */
 body {
   margin: 0;
   line-height: 1.5;
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   zoom: 85%;
 }
@@ -26,7 +25,7 @@ body {
   box-sizing: border-box;
 }
 input,textarea,select{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .section{
   background-color: hsl(240, 63%, 97%);
@@ -99,7 +98,7 @@ input,textarea,select{
 .section-title h2{
   font-size: 32px;
   color: #302e4c;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   margin: 0;
   position: relative;
@@ -136,7 +135,8 @@ input,textarea,select{
 }
 .btn{
   font-size: 16px;
-  font-family: 'Rubik', sans-serif;font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   padding: 12px 35px;
   color: #ffffff;
   border-radius: 40px;
@@ -233,7 +233,7 @@ input,textarea,select{
 .aside .logo a{
   font-size: 34px;
   color: #302e4c;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   text-decoration: none;
   display: flex;
@@ -332,6 +332,7 @@ input,textarea,select{
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
 }
 .aside .nav li a:not(.active):hover{
   padding-left: 5px;
@@ -364,7 +365,7 @@ input,textarea,select{
 .home .intro h1{
   font-size: 30px;
   color: #302e4c;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   margin: 20px 0 5px;
 }
@@ -412,6 +413,7 @@ input,textarea,select{
   font-size: 24px;
   margin-bottom: 15px;
   font-weight: 700;
+  font-family: 'Poppins', sans-serif;
 }
 .about .about-content .about-text p{
   font-size: 16px;
@@ -514,6 +516,7 @@ input,textarea,select{
   margin-bottom: 30px;
   font-weight: 700;
   color: #302e4d;
+  font-family: 'Poppins', sans-serif;
 }
 .about .about-content .timeline-box{
   flex: 0 0 100%;
@@ -621,6 +624,7 @@ input,textarea,select{
   color: #302e4d;
   text-transform: capitalize;
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 .project .project-item-inner .project-info .project-description{
   font-size: 16px;
