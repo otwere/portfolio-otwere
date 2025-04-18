@@ -638,8 +638,7 @@ input,textarea,select{
   font-size: 16px;
   line-height: 25px;
   color: #e91f05;
-  font-weight: 400;
-  margin-bottom: 15px;
+  font-weight: 400; 
 }
 
 
