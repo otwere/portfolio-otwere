@@ -8,7 +8,7 @@
 body {
   margin: 0;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   zoom: 85%;
@@ -231,7 +231,7 @@ input,textarea,select{
   padding: 30px 0;
 }
 .aside .logo a{
-  font-size: 34px;
+  font-size: 32px;
   color: #302e4c;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
