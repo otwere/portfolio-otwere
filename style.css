@@ -11,7 +11,6 @@ body {
   font-size: 15px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  zoom: 85%;
 }
 
 *{
@@ -96,7 +95,7 @@ input,textarea,select{
   margin-bottom: 60px;
 }
 .section-title h2{
-  font-size: 32px;
+  font-size: 26px;
   color: #302e4c;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -206,7 +205,7 @@ input,textarea,select{
 
 /* Aside */
 .aside{
-  width: 320px;
+  width: 270px;
   background-color: hsl(276, 100%, 99%);
   position: fixed;
   height: 100%;
@@ -228,10 +227,10 @@ input,textarea,select{
   overflow-y: auto;
 }
 .aside .logo{
-  padding: 30px 0;
+  padding: 28px 0;
 }
 .aside .logo a{
-  font-size: 32px;
+  font-size: 26px;
   color: #302e4c;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -263,18 +262,14 @@ input,textarea,select{
   border: 1px solid #d4d4e3;
   cursor: pointer;
   position: fixed;
-  left: 300px;
+  left: 270px;
   top: 20px;
   z-index: 11;
   border-radius: 5px;
   background-color: hsl(280, 100%, 99%);
-  /* display: flex;*/
   align-items: center;
   display: none;
   justify-content: center;
-  display: -ms-flexbox;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -448,9 +443,10 @@ input,textarea,select{
 }
 .about .about-content .personal-info .buttons{
   margin-top: 20px;
+  text-align: center;
 }
 .about .about-content .personal-info .buttons .btn{
-  margin-left: 56rem;
+  margin-left: 0;
   margin-top: 10px;
 }
 .about .about-content .skills{
@@ -592,6 +588,7 @@ input,textarea,select{
   flex: 0 0 33.33%;
   max-width: 33.33%;
   display: flex;
+  padding-bottom: 15px;
 }
 .project .project-item-inner{
   border-radius: 10px;
@@ -606,6 +603,8 @@ input,textarea,select{
 }
 .project .project-item-inner .project-img img{
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
 }
@@ -614,9 +613,8 @@ input,textarea,select{
   -webkit-transform: scale(1.1);
 }
 .project .project-item-inner .project-info{
-  padding: 30px 15px;
+  padding: 20px 15px;
   background-color: hsl(12, 100%, 99%);
-
 }
 .project .project-item-inner .project-info .project-title{
   font-size: 18px;
@@ -627,16 +625,18 @@ input,textarea,select{
   font-family: 'Poppins', sans-serif;
 }
 .project .project-item-inner .project-info .project-description{
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 14px;
+  line-height: 22px;
   color: #504e70;
   font-weight: 400;
   margin-bottom: 15px;
+  height: 110px;
+  overflow: hidden;
 }
 
 .client-project-note{
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 14px;
+  line-height: 22px;
   color: #e91f05;
   font-weight: 400; 
 }
@@ -664,14 +664,27 @@ input,textarea,select{
   font-weight: 400;
 }
 .contact-text{
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 400;
   margin-top: 60px;
-  margin-left: 260px;
+  margin-left: 0;
+  text-align: center;
 }
-.contact-btn{
-  margin-left: 450px;
+.contact-btn {
+  margin-left: 28rem;
   margin-top: 60px;
+  text-align: center;
+  display: block;
+}
+
+/* Mobile centering */
+@media (max-width: 768px) {
+  .contact-btn {
+    margin-left: 20rem;
+    margin-right: auto;
+    /* Optional: Adjust top margin for mobile */
+    margin-top: 40px;
+  }
 }
 
 
@@ -717,96 +730,111 @@ body.dark .aside .nav li a{
 
 
 /* Responsive */
-
-@media (max-width:1199px){
-  .aside .nav-toggler{
-    display: flex;
-    display: -ms-flexbox;
-    left: 30px;
+@media (max-width: 1199px) {
+  .aside {
+    width: 270px;
   }
-  .aside .nav-toggler.open{
-    left: 200px;
-  }
-  .aside{
-    left: -270px;
-  }
-  .aside.open{
-    left: 0px;
-  }
-  .section{
-    left: 0;
-  }
-  .section.open{
+  .section {
     left: 270px;
   }
-  .aside{
-    left: -270px;
+  .aside .nav-toggler {
+    display: flex;
+    left: 30px;
   }
-  .main-content{
-    padding-left: 0;
+  .aside .nav-toggler.open {
+    left: 240px;
   }
-  .about .about-content .personal-info .info-item p span{
+  .about .about-content .personal-info .info-item p span {
     display: block;
     margin-left: 0;
   }
-  .project .project-item{
+  .project .project-item {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
-@media (max-width:815px){
-  .about .about-content .skills{
-    flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    max-width: 50%;
-    margin-top: 40px;
+
+@media (max-width: 991px) {
+  .about .about-content .skills,
+  .about .about-content .education,
+  .about .about-content .experience {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .about .about-content .personal-info .buttons .btn {
+    margin-left: 0;
+  }
+  .section-title h2 {
+    font-size: 28px;
+  }
+  .contact-text {
+    font-size: 36px;
   }
 }
-@media (max-width:740px){
-  .about .about-content .education{
-    flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    max-width: 100%;
-    margin-top: 30px;
+
+@media (max-width: 767px) {
+  .aside {
+    left: -270px;
+    z-index: 11;
   }
-  .about .about-content .experience{
-    flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    max-width: 100%;
-    margin-top: 30px;
+  .aside.open {
+    left: 0;
   }
-}
-@media (max-width:650px){
-  .project .project-item{
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-bottom: 30px;
+  .section {
+    left: 0;
   }
-}
-@media (max-width:550px){
-  .about .about-content .personal-info .info-item{
+  .section.open {
+    left: 270px;
+  }
+  .aside .nav-toggler {
+    display: flex;
+  }
+  .project .project-item {
     flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
     max-width: 100%;
   }
-  .about .about-content .skills{
-    flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    max-width: 100%;
-    margin-top: 40px;
-  }
-  .contact .contact-info-item{
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
+  .contact-text,
+  .contact-btn {
+    margin-left: 0;
     text-align: center;
-    margin-bottom: 40px;
   }
-  .contact .contact-form .col-6{
-    -ms-flex: 0 0 100%;
+  .home .intro h1 {
+    font-size: 24px;
+  }
+  .section-title h2 {
+    font-size: 24px;
+  }
+  .contact-text {
+    font-size: 26px;
+    margin-top: 40px;
+  }
+  .contact-btn {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .about .about-content .personal-info .info-item {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .contact .contact-info-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .home .intro img {
+    width: 150px;
+    height: 150px;
+  }
+  .contact-text {
+    font-size: 28px;
+  }
+  .section .container {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .about .about-content .skills {
+    margin-top: 30px;
   }
 }
