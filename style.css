@@ -834,6 +834,20 @@ select {
   display: block;
 }
 
+/* Mobile (767px and below) */
+@media (max-width: 767px) {
+  .contact-btn {
+    margin: 30px auto 0;  /* center horizontally */
+    display: block;
+    text-align: center;
+  }
+
+  /* make sure the wrapper row centers too */
+  .row.padd-15 {
+    justify-content: center;
+  }
+}
+
 /* Responsive */
 @media (max-width: 1199px) {
   .aside {
