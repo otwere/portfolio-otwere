@@ -232,36 +232,68 @@ select {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #e40017;
-  color: white;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #ff4d4d;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.4s ease;
-  z-index: 1000;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
 }
 
+/* Show on scroll */
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
 }
 
+/* Hover Effect */
 .back-to-top:hover {
-  background-color: #c10012;
-  transform: translateY(-5px);
+  background: #222;
+  transform: scale(1.1);
 }
 
-.back-to-top i {
-  font-size: 24px;
+/* Optional progress indicator */
+.back-to-top::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  clip-path: inset(calc(var(--progress, 0%) - 100%) 0 0 0);
+  transition: clip-path 0.3s ease;
+}
+
+
+.back-to-top:hover::after {
+  opacity: 1;
+}
+.back-to-top.show {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(228,0,23,0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(228,0,23,0); }
+  100% { box-shadow: 0 0 0 0 rgba(228,0,23,0); }
+}
+
+
+/* Adjust position when mobile menu is open */
+@media (max-width: 767px) {
+  .aside.open + .main-content + .back-to-top,
+  .aside.open ~ .back-to-top {
+    left: 270px;
+    right: auto;
+  }
 }
 
 /* Aside */
@@ -802,61 +834,6 @@ select {
   display: block;
 }
 
-/* Dark Mode */
-body.dark .section {
-  background-color: hsl(0, 0%, 8%);
-}
-
-body.dark .contact .contact-form .form-item .form-control,
-body.dark .project .project-item-inner .project-info,
-body.dark .about .about-content .timeline,
-body.dark .aside {
-  background-color: hsl(0, 0%, 13%);
-}
-
-body.dark .contact .contact-form .form-item .form-control,
-body.dark .contact .contact-info-item p,
-body.dark .project .project-item-inner .project-info .project-title,
-body.dark .about .about-content .timeline .timeline-title,
-body.dark .about .about-content h3.title,
-body.dark .about .about-content .skills .skill-item h4,
-body.dark .about .about-content .personal-info .info-item p,
-body.dark .section-title h2,
-body.dark .home .intro h1,
-body.dark .aside .logo a,
-body.dark .aside .nav li a {
-  color: white;
-}
-
-body.dark .aside,
-body.dark .project .project-item-inner .project-info .project-description,
-body.dark .about .about-content .timeline .timeline-date,
-body.dark .about .about-content .timeline .timeline-text,
-body.dark .about .about-content .personal-info .info-item p span,
-body.dark .about .about-content .about-text p,
-body.dark .home .intro p {
-  color: #e9e9e9;
-}
-
-body.dark .shadow-dark {
-  box-shadow: none;
-  -webkit-box-shadow: none;
-}
-
-body.dark .aside .nav li a {
-  border-color: #393939;
-}
-
-/* Dark mode for back-to-top button */
-body.dark .back-to-top {
-  background-color: #c10012;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-}
-
-body.dark .back-to-top:hover {
-  background-color: #a0000f;
-}
-
 /* Responsive */
 @media (max-width: 1199px) {
   .aside {
@@ -903,6 +880,14 @@ body.dark .back-to-top:hover {
   .section-title h2 {
     font-size: 26px;
   }
+  
+  /* Apply margin-top on mobile */
+  @media (max-width: 768px) {
+    .section-title h2 {
+      margin-top: 20px;
+    }
+  }
+  
 
   .contact-text {
     font-size: 26px;
