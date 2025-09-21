@@ -15,18 +15,18 @@ const backToTopButton = document.querySelector(".back-to-top");
 if (backToTopButton) {
   // Show/hide button based on scroll position
   window.addEventListener("scroll", function () {
-    if (window.pageYOffset > 40) {
+    if (window.pageYOffset > 10) {
       backToTopButton.classList.add("show");
     } else {
       backToTopButton.classList.remove("show");
     }
 
     // Change icon depending on position
-    if (window.pageYOffset > 10) {
-      backToTopButton.innerHTML = '<i class="fa fa-arrow-up"></i>';
-    } else {
-      backToTopButton.innerHTML = '<i class="fa fa-arrow-down"></i>';
-    }
+    // if (window.pageYOffset > 5) {
+    //   backToTopButton.innerHTML = '<i class="fa fa-arrow-up"></i>';
+    // } else {
+    //   backToTopButton.innerHTML = '<i class="fa fa-arrow-down"></i>';
+    // }
 
     // Update scroll progress
     const scrollTop =
@@ -41,7 +41,7 @@ if (backToTopButton) {
   // Smooth scroll to top or down
   backToTopButton.addEventListener("click", function (e) {
     e.preventDefault();
-    if (window.pageYOffset > 40) {
+    if (window.pageYOffset > 5) {
       // Scroll to top
       window.scrollTo({
         top: 0,
@@ -125,3 +125,5 @@ if (navTogglerBtn && aside) {
     }
   }
 }
+
+
